@@ -25,6 +25,9 @@ export async function POST(req: Request): Promise<NextResponse> {
     return NextResponse.json({ message: "User created", user });
   }
   catch (error) {
+    // Log error details to server logs to help debug deployment issues
+    // eslint-disable-next-line no-console
+    console.error('Signup error:', error);
     return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
 }
