@@ -4,7 +4,7 @@ import connectDB from "@/lib/mongodb";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../../auth/[...nextauth]/route";
 
-export async function GET(req: Request, {params}:{params:{id:string}}){
+export async function GET(req: Request, {params}:{params:Promise<{id:string}>>}){
     try {
         await connectDB();
         const session = await getServerSession(authOptions);
@@ -27,7 +27,7 @@ export async function GET(req: Request, {params}:{params:{id:string}}){
     }
 }
 
-export async function PUT(req: Request, {params}:{params:{id:string}}){
+export async function PUT(req: Request, {params}:{params:Promise<{id:string}>>}){
     try {
         await connectDB();
         const session = await getServerSession(authOptions);
@@ -51,7 +51,7 @@ export async function PUT(req: Request, {params}:{params:{id:string}}){
     }
 }
 
-export async function DELETE(req: Request, {params}:{params:{id:string}}){
+export async function DELETE(req: Request, {params}:{params:Promise<{id:string}>>}){
     try {
         await connectDB();
         const session = await getServerSession(authOptions);
