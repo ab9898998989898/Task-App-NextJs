@@ -1,0 +1,272 @@
+[
+  {
+    "id": 1,
+    "title": "10 Productivity Hacks for Developers",
+    "excerpt": "Learn how to optimize your workflow and get more done in less time.",
+    "date": "2023-11-15",
+    "readTime": "5 min read",
+    "category": "Productivity",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=Productivity+Hacks"
+  },
+  {
+    "id": 2,
+    "title": "The Future of Task Management",
+    "excerpt": "Exploring the latest trends and innovations in task management.",
+    "date": "2023-11-10",
+    "readTime": "7 min read",
+    "category": "Product News",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=Future+of+Tasks"
+  },
+  {
+    "id": 3,
+    "title": "Building a Remote Team Culture",
+    "excerpt": "Best practices for fostering collaboration with a distributed team.",
+    "date": "2023-11-05",
+    "readTime": "6 min read",
+    "category": "Team",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=Remote+Culture"
+  },
+  {
+    "id": 4,
+    "title": "Mastering Time Blocking",
+    "excerpt": "How to effectively use time blocking to increase productivity.",
+    "date": "2023-10-28",
+    "readTime": "4 min read",
+    "category": "Productivity",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=Time+Blocking"
+  },
+  {
+    "id": 5,
+    "title": "The Psychology of Task Completion",
+    "excerpt": "Understanding the mental models behind task completion.",
+    "date": "2023-10-20",
+    "readTime": "8 min read",
+    "category": "Psychology",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=Psychology"
+  },
+  {
+    "id": 6,
+    "title": "Integrating Task Management Tools",
+    "excerpt": "How to connect your favorite apps for a seamless workflow.",
+    "date": "2023-10-15",
+    "readTime": "5 min read",
+    "category": "Tutorials",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=Integrations"
+  },
+  {
+    "id": 7,
+    "title": "Deep Dive into JavaScript Generators",
+    "excerpt": "Unlock the power of generators for asynchronous programming.",
+    "date": "2023-10-10",
+    "readTime": "9 min read",
+    "category": "JavaScript",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=JS+Generators"
+  },
+  {
+    "id": 8,
+    "title": "UI vs. UX: A Designer's Guide",
+    "excerpt": "Demystifying the two most confused terms in design.",
+    "date": "2023-10-05",
+    "readTime": "6 min read",
+    "category": "Design",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=UI+vs+UX"
+  },
+  {
+    "id": 9,
+    "title": "Content Marketing Strategies for 2024",
+    "excerpt": "How to build an audience and drive engagement.",
+    "date": "2023-10-01",
+    "readTime": "7 min read",
+    "category": "Marketing",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=Content+Marketing"
+  },
+  {
+    "id": 10,
+    "title": "Acme Inc. Increases Productivity by 40%",
+    "excerpt": "A case study on how our tools transformed their workflow.",
+    "date": "2023-09-25",
+    "readTime": "5 min read",
+    "category": "Case Study",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=Case+Study"
+  },
+  {
+    "id": 11,
+    "title": "The Importance of Digital Detox",
+    "excerpt": "Why taking a break from screens is good for your brain.",
+    "date": "2023-09-20",
+    "readTime": "4 min read",
+    "category": "Health",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=Digital+Detox"
+  },
+  {
+    "id": 12,
+    "title": "Async/Await vs. Promises",
+    "excerpt": "A detailed comparison for modern JavaScript developers.",
+    "date": "2023-09-15",
+    "readTime": "6 min read",
+    "category": "JavaScript",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=Async+Await"
+  },
+  {
+    "id": 13,
+    "title": "How to Run Effective Team Meetings",
+    "excerpt": "Tips to make your meetings shorter and more productive.",
+    "date": "2023-09-10",
+    "readTime": "5 min read",
+    "category": "Team",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=Team+Meetings"
+  },
+  {
+    "id": 14,
+    "title": "The Pomodoro Technique Explained",
+    "excerpt": "Break down your work into focused intervals.",
+    "date": "2023-09-05",
+    "readTime": "4 min read",
+    "category": "Productivity",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=Pomodoro"
+  },
+  {
+    "id": 15,
+    "title": "Designing for Accessibility (a11y)",
+    "excerpt": "Creating inclusive products for everyone.",
+    "date": "2023-09-01",
+    "readTime": "8 min read",
+    "category": "Design",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=Accessibility"
+  },
+  {
+    "id": 16,
+    "title": "New Feature: AI-Powered Summaries",
+    "excerpt": "Our latest update uses AI to summarize your long notes.",
+    "date": "2023-08-28",
+    "readTime": "3 min read",
+    "category": "Product News",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=AI+Summaries"
+  },
+  {
+    "id": 17,
+    "title": "SEO for Bloggers: The Ultimate Guide",
+    "excerpt": "How to get your articles to rank on Google.",
+    "date": "2023-08-25",
+    "readTime": "10 min read",
+    "category": "Marketing",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=SEO+Guide"
+  },
+  {
+    "id": 18,
+    "title": "The Link Between Exercise and Focus",
+    "excerpt": "How physical activity can boost your mental performance.",
+    "date": "2023-08-20",
+    "readTime": "5 min read",
+    "category": "Health",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=Exercise+Focus"
+  },
+  {
+    "id": 19,
+    "title": "Understanding the 'this' Keyword",
+    "excerpt": "A deep dive into one of JavaScript's most confusing concepts.",
+    "date": "2023-08-15",
+    "readTime": "7 min read",
+    "category": "JavaScript",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=JS+This"
+  },
+  {
+    "id": 20,
+    "title": "How Startup X Scaled with Our API",
+    "excerpt": "Another success story from one of our happy customers.",
+    "date": "2023-08-10",
+    "readTime": "5 min read",
+    "category": "Case Study",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=Startup+X+Case+Study"
+  },
+  {
+    "id": 21,
+    "title": "The Art of Giving Constructive Feedback",
+    "excerpt": "How to help your team grow without demotivating them.",
+    "date": "2023-08-05",
+    "readTime": "6 min read",
+    "category": "Team",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=Feedback"
+  },
+  {
+    "id": 22,
+    "title": "Email Marketing Essentials",
+    "excerpt": "Building a newsletter that your subscribers actually want to read.",
+    "date": "2023-08-01",
+    "readTime": "6 min read",
+    "category": "Marketing",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=Email+Marketing"
+  },
+  {
+    "id": 23,
+    "title": "Getting Started with React Hooks",
+    "excerpt": "A beginner's tutorial on useState and useEffect.",
+    "date": "2023-07-28",
+    "readTime": "8 min read",
+    "category": "Tutorials",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=React+Hooks"
+  },
+  {
+    "id": 24,
+    "title": "Color Theory for Web Developers",
+    "excerpt": "How to choose colors that work well together.",
+    "date": "2023-07-25",
+    "readTime": "5 min read",
+    "category": "Design",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=Color+Theory"
+  },
+  {
+    "id": 25,
+    "title": "The Burnout Epidemic",
+    "excerpt": "Recognizing the signs and how to recover.",
+    "date": "2023-07-20",
+    "readTime": "7 min read",
+    "category": "Health",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=Burnout"
+  },
+  {
+    "id": 26,
+    "title": "Advanced CSS Grid Techniques",
+    "excerpt": "Go beyond the basics of CSS Grid with these powerful tips.",
+    "date": "2023-07-15",
+    "readTime": "9 min read",
+    "category": "Tutorials",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=CSS+Grid"
+  },
+  {
+    "id": 27,
+    "title": "How to Overcome Procrastination",
+    "excerpt": "A psychological look at why we procrastinate and how to stop.",
+    "date": "2023-07-10",
+    "readTime": "6 min read",
+    "category": "Psychology",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=Procrastination"
+  },
+  {
+    "id": 28,
+    "title": "The Rise of Micro-FrontendS",
+    "excerpt": "Why large companies are breaking up their monolithic UIs.",
+    "date": "2023-07-05",
+    "readTime": "7 min read",
+    "category": "JavaScript",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=Micro+Frontends"
+  },
+  {
+    "id": 29,
+    "title": "Our New Desktop App is Here!",
+    "excerpt": "Get all the power of our platform in a native desktop experience.",
+    "date": "2023-07-01",
+    "readTime": "3 min read",
+    "category": "Product News",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=Desktop+App"
+  },
+  {
+    "id": 30,
+    "title": "The 'Getting Things Done' (GTD) Method",
+    "excerpt": "A deep dive into David Allen's popular productivity system.",
+    "date": "2D023-06-25",
+    "readTime": "8 min read",
+    "category": "Productivity",
+    "image": "https://placehold.co/600x400/0f172a/38bdf8?text=GTD+Method"
+  }
+]
