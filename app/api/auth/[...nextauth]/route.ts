@@ -6,6 +6,8 @@ import bcrypt from "bcryptjs";
 
 export const authOptions = {
   session: { strategy: "jwt" as const },
+  // Enable NextAuth debug logging when NEXTAUTH_DEBUG=true in env
+  debug: process.env.NEXTAUTH_DEBUG === 'true',
   providers: [
     CredentialsProvider({
       name: "credentials",
