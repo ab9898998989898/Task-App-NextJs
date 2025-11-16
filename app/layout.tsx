@@ -8,7 +8,7 @@ export const metadata = {
   description: 'A clean, production-ready Next.js task manager'
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className="min-h-screen bg-[#0F172A] text-slate-100 antialiased">
@@ -58,7 +58,7 @@ export default function RootLayout({ children }) {
           </div>
 
           {/* Scroll Progress Indicator */}
-          <div className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#3B82F6] via-[#22D3EE] to-[#34D399] origin-left z-[100] scroll-indicator" />
+          <div className="fixed top-0 left-0 right-0 h-1 bg-linear-to-r from-[#3B82F6] via-[#22D3EE] to-[#34D399] origin-left z-[100] scroll-indicator" />
         </Providers>
 
         <style>{`

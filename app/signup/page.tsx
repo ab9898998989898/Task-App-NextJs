@@ -82,7 +82,7 @@ export default function SignupPage() {
         className="relative w-full max-w-md"
       >
         {/* Glow Effect */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#22D3EE] via-[#3B82F6] to-[#22D3EE] rounded-3xl blur-xl opacity-20"></div>
+        <div className="absolute inset-0 bg-linear-to-r from-[#22D3EE] via-[#3B82F6] to-[#22D3EE] rounded-3xl blur-xl opacity-20"></div>
         
         {/* Card Content */}
         <div className="relative bg-[#1E293B] rounded-3xl p-8 sm:p-10 border border-slate-700/50 shadow-2xl">
@@ -93,7 +93,7 @@ export default function SignupPage() {
             transition={{ delay: 0.2, type: "spring", stiffness: 150 }}
             className="flex justify-center mb-8"
           >
-            <div className="w-16 h-16 bg-gradient-to-br from-[#22D3EE] to-[#3B82F6] rounded-2xl flex items-center justify-center shadow-lg shadow-[#22D3EE]/50">
+            <div className="w-16 h-16 bg-linear-to-br from-[#22D3EE] to-[#3B82F6] rounded-2xl flex items-center justify-center shadow-lg shadow-[#22D3EE]/50">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
               </svg>
@@ -107,7 +107,7 @@ export default function SignupPage() {
             transition={{ delay: 0.3 }}
             className="text-center mb-8"
           >
-            <h1 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-[#22D3EE] via-[#3B82F6] to-[#22D3EE] bg-clip-text text-transparent mb-2">
+            <h1 className="text-3xl sm:text-4xl font-bold bg-linear-to-r from-[#22D3EE] via-[#3B82F6] to-[#22D3EE] bg-clip-text text-transparent mb-2">
               Create Account
             </h1>
             <p className="text-slate-400">Join us and start managing your tasks</p>
@@ -260,7 +260,7 @@ export default function SignupPage() {
               transition={{ delay: 0.8 }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full py-3 px-4 bg-gradient-to-r from-[#22D3EE] to-[#3B82F6] text-white font-semibold rounded-xl shadow-lg shadow-[#22D3EE]/50 hover:shadow-[#22D3EE]/70 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group"
+              className="w-full py-3 px-4 bg-linear-to-r from-[#22D3EE] to-[#3B82F6] text-white font-semibold rounded-xl shadow-lg shadow-[#22D3EE]/50 hover:shadow-[#22D3EE]/70 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group"
             >
               {isLoading ? (
                 <span className="flex items-center justify-center">
@@ -273,7 +273,7 @@ export default function SignupPage() {
               ) : (
                 <>
                   <span className="relative z-10">Create Account</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#3B82F6] to-[#22D3EE] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-linear-to-r from-[#3B82F6] to-[#22D3EE] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </>
               )}
             </motion.button>

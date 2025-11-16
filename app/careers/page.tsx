@@ -190,7 +190,8 @@ export default function CareersPage() {
     }
   };
 
-  const fadeInUp = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const fadeInUp: any = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
   };
@@ -212,7 +213,7 @@ export default function CareersPage() {
     <div className="bg-slate-950 text-slate-300">
       {/* Hero Section */}
       <div className="relative overflow-hidden py-24 md:py-32">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-slate-900 to-cyan-900/30" />
+        <div className="absolute inset-0 bg-linear-to-br from-blue-900/30 via-slate-900 to-cyan-900/30" />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -220,7 +221,7 @@ export default function CareersPage() {
           className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10"
         >
           <motion.h1 
-            className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6"
+            className="text-5xl md:text-6xl font-bold bg-linear-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
@@ -412,7 +413,7 @@ export default function CareersPage() {
             viewport={{ once: true }}
             className="flex flex-col md:flex-row gap-4 mb-8"
           >
-            <div className="relative flex-grow">
+            <div className="relative grow">
               <input
                 type="text"
                 placeholder="Search by title or keyword..."
@@ -421,7 +422,7 @@ export default function CareersPage() {
               />
               <Search className="w-5 h-5 text-slate-500 absolute left-3 top-1/2 -translate-y-1/2" />
             </div>
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <select
                 className="w-full md:w-auto px-4 py-3 bg-slate-900/50 border border-slate-800/50 rounded-lg text-slate-100 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                 onChange={(e) => setSelectedDept(e.target.value)}
@@ -450,7 +451,7 @@ export default function CareersPage() {
                   className="bg-slate-900/50 backdrop-blur-lg p-6 rounded-xl border border-slate-800/50 hover:border-cyan-500/30 transition-colors"
                 >
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                    <div className="flex-grow">
+                    <div className="grow">
                       <h3 className="text-xl font-semibold text-slate-100">{position.title}</h3>
                       <div className="flex flex-wrap gap-x-4 gap-y-2 mt-2 mb-3">
                         <span className="text-slate-400 text-sm flex items-center gap-1.5">
@@ -471,7 +472,7 @@ export default function CareersPage() {
                     <motion.button 
                       whileHover={{ scale: 1.03 }}
                       whileTap={{ scale: 0.98 }}
-                      className="px-6 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-medium rounded-lg hover:opacity-90 transition-opacity w-full md:w-auto flex-shrink-0"
+                      className="px-6 py-2 bg-linear-to-r from-blue-500 to-cyan-500 text-white font-medium rounded-lg hover:opacity-90 transition-opacity w-full md:w-auto shrink-0"
                     >
                       Apply Now
                     </motion.button>

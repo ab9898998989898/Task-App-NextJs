@@ -57,13 +57,13 @@ export default function Footer() {
               <motion.div
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
-                className="w-10 h-10 bg-gradient-to-br from-[#3B82F6] to-[#22D3EE] rounded-xl flex items-center justify-center shadow-lg shadow-[#3B82F6]/30"
+                className="w-10 h-10 bg-linear-to-br from-[#3B82F6] to-[#22D3EE] rounded-xl flex items-center justify-center shadow-lg shadow-[#3B82F6]/30"
               >
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
                 </svg>
               </motion.div>
-              <span className="font-bold text-xl bg-gradient-to-r from-[#3B82F6] to-[#22D3EE] bg-clip-text text-transparent">
+              <span className="font-bold text-xl bg-linear-to-r from-[#3B82F6] to-[#22D3EE] bg-clip-text text-transparent">
                 TaskFlow
               </span>
             </Link>
@@ -78,7 +78,7 @@ export default function Footer() {
                   href={social.href}
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-10 h-10 bg-[#1E293B] hover:bg-gradient-to-br hover:from-[#3B82F6] hover:to-[#22D3EE] rounded-lg flex items-center justify-center transition-all duration-300 group"
+                  className="w-10 h-10 bg-[#1E293B] hover:bg-linear-to-br hover:from-[#3B82F6] hover:to-[#22D3EE] rounded-lg flex items-center justify-center transition-all duration-300 group"
                   aria-label={social.name}
                 >
                   <svg className="w-5 h-5 text-slate-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
@@ -166,7 +166,7 @@ export default function Footer() {
       </div>
 
       {/* Decorative Bottom Gradient */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#3B82F6] to-transparent opacity-50" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#3B82F6] to-transparent opacity-50" />
     </footer>
   );
 }

@@ -12,7 +12,8 @@ import {
   BookOpen
 } from 'lucide-react';
 
-const fadeInUp = {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const fadeInUp: any = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
@@ -114,7 +115,7 @@ export default function ContactPage() {
         transition={{ duration: 0.6 }}
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-20"
       >
-        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6">
+        <h1 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6">
           Get in Touch
         </h1>
         <p className="text-xl text-slate-400 max-w-3xl mx-auto">

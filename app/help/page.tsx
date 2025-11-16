@@ -3,10 +3,10 @@ import { HelpCircle, Mail, MessageSquare, BookOpen, Shield, CreditCard, Settings
 import { useState } from 'react';
 
 export default function HelpPage() {
-  const [expandedFaq, setExpandedFaq] = useState(null);
+  const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
 
-  const toggleFaq = (index) => {
+  const toggleFaq = (index: number) => {
     setExpandedFaq(expandedFaq === index ? null : index);
   };
 
@@ -137,15 +137,15 @@ export default function HelpPage() {
   })).filter(category => category.questions.length > 0);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 px-4">
+    <div className="min-h-screen bg-linear-to-br from-slate-900 via-slate-800 to-slate-900 py-12 px-4">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="bg-slate-900/50 backdrop-blur-lg rounded-2xl p-8 border border-slate-800/50 shadow-2xl mb-8">
           <div className="flex items-center gap-3 mb-4">
-            <div className="p-3 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl">
+            <div className="p-3 bg-linear-to-br from-blue-500 to-cyan-500 rounded-xl">
               <HelpCircle className="w-8 h-8 text-white" />
             </div>
-            <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl font-bold bg-linear-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
               Help Center
             </h1>
           </div>
@@ -169,7 +169,7 @@ export default function HelpPage() {
         {/* Quick Links */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <div className="bg-slate-900/50 backdrop-blur-lg rounded-xl p-6 border border-slate-800/50 hover:border-cyan-500/50 transition-all group cursor-pointer">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <div className="w-12 h-12 bg-linear-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
               <FileText className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-xl font-semibold text-slate-100 mb-2">Documentation</h3>
@@ -177,7 +177,7 @@ export default function HelpPage() {
           </div>
 
           <div className="bg-slate-900/50 backdrop-blur-lg rounded-xl p-6 border border-slate-800/50 hover:border-cyan-500/50 transition-all group cursor-pointer">
-            <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <div className="w-12 h-12 bg-linear-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
               <Users className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-xl font-semibold text-slate-100 mb-2">Community</h3>
@@ -185,7 +185,7 @@ export default function HelpPage() {
           </div>
 
           <div className="bg-slate-900/50 backdrop-blur-lg rounded-xl p-6 border border-slate-800/50 hover:border-cyan-500/50 transition-all group cursor-pointer">
-            <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+            <div className="w-12 h-12 bg-linear-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
               <Zap className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-xl font-semibold text-slate-100 mb-2">Video Tutorials</h3>
@@ -199,9 +199,9 @@ export default function HelpPage() {
             const Icon = category.icon;
             return (
               <section key={catIndex} className="bg-slate-900/50 backdrop-blur-lg rounded-2xl border border-slate-800/50 shadow-xl overflow-hidden">
-                <div className="p-6 border-b border-slate-800/50 bg-gradient-to-r from-slate-800/50 to-transparent">
+                <div className="p-6 border-b border-slate-800/50 bg-linear-to-r from-slate-800/50 to-transparent">
                   <h2 className="text-2xl font-semibold text-slate-100 flex items-center gap-3">
-                    <div className="p-2 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg">
+                    <div className="p-2 bg-linear-to-br from-blue-500 to-cyan-500 rounded-lg">
                       <Icon className="w-6 h-6 text-white" />
                     </div>
                     {category.category}
@@ -214,7 +214,7 @@ export default function HelpPage() {
                 <div className="p-6 space-y-3">
                   {category.questions.map((faq, qIndex) => {
                     const globalIndex = `${catIndex}-${qIndex}`;
-                    const isExpanded = expandedFaq === globalIndex;
+                    const isExpanded = expandedFaq === parseInt(globalIndex);
                     
                     return (
                       <div 
@@ -222,14 +222,14 @@ export default function HelpPage() {
                         className="bg-slate-800/30 rounded-xl border border-slate-800/50 hover:border-cyan-500/30 transition-all overflow-hidden"
                       >
                         <button
-                          onClick={() => toggleFaq(globalIndex)}
+                          onClick={() => toggleFaq(parseInt(globalIndex))}
                           className="w-full p-5 flex items-center justify-between text-left hover:bg-slate-800/50 transition-colors"
                         >
                           <h3 className="font-medium text-slate-100 pr-4">{faq.q}</h3>
                           {isExpanded ? (
-                            <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                            <ChevronUp className="w-5 h-5 text-cyan-400 shrink-0" />
                           ) : (
-                            <ChevronDown className="w-5 h-5 text-slate-400 flex-shrink-0" />
+                            <ChevronDown className="w-5 h-5 text-slate-400 shrink-0" />
                           )}
                         </button>
                         
@@ -256,9 +256,9 @@ export default function HelpPage() {
         </div>
 
         {/* Contact Support Section */}
-        <section className="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-lg rounded-2xl p-8 border border-slate-800/50 shadow-2xl mt-8">
+        <section className="bg-linear-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-lg rounded-2xl p-8 border border-slate-800/50 shadow-2xl mt-8">
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl">
+            <div className="p-3 bg-linear-to-br from-blue-500 to-cyan-500 rounded-xl">
               <Mail className="w-7 h-7 text-white" />
             </div>
             <h2 className="text-3xl font-semibold text-slate-100">Still Need Help?</h2>
@@ -291,7 +291,7 @@ export default function HelpPage() {
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
               href="mailto:support@taskapp.com" 
-              className="flex-1 px-6 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-medium rounded-xl hover:opacity-90 transition-all text-center shadow-lg hover:shadow-cyan-500/25 transform hover:-translate-y-0.5"
+              className="flex-1 px-6 py-4 bg-linear-to-r from-blue-500 to-cyan-500 text-white font-medium rounded-xl hover:opacity-90 transition-all text-center shadow-lg hover:shadow-cyan-500/25 transform hover:-translate-y-0.5"
             >
               Email Support Team
             </a>

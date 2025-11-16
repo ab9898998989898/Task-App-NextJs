@@ -28,7 +28,7 @@ export default function ForgotPasswordPage() {
         <p className="text-slate-400 mb-6">Enter your email and we'll send reset instructions.</p>
         <form onSubmit={submit} className="space-y-4">
           <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="you@example.com" required className="w-full px-4 py-3 bg-[#0F172A] border border-slate-700 rounded-xl text-slate-200" />
-          <button disabled={loading} className="w-full py-3 bg-gradient-to-r from-[#3B82F6] to-[#22D3EE] text-white rounded-xl">{loading ? 'Sending...' : 'Send reset'}</button>
+          <button disabled={loading} className="w-full py-3 bg-linear-to-r from-[#3B82F6] to-[#22D3EE] text-white rounded-xl">{loading ? 'Sending...' : 'Send reset'}</button>
         </form>
         {/* Token is never shown to client for privacy; check email (or server logs in dev). */}
       </motion.div>

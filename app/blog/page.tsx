@@ -7,7 +7,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 export default function BlogPage() {
-  const [blogPosts, setBlogPosts] = useState([]);
+  const [blogPosts, setBlogPosts] = useState<any[]>([]);
 
   const fetchBlogs = async () => {
     try {
@@ -24,7 +24,7 @@ export default function BlogPage() {
   }, []);
 
   const categories = useMemo(() => {
-    const categoryCounts = blogPosts.reduce((acc, post) => {
+    const categoryCounts = blogPosts.reduce((acc: Record<string, number>, post: any) => {
       const category = post.category;
       acc[category] = (acc[category] || 0) + 1;
       return acc;
@@ -73,7 +73,7 @@ export default function BlogPage() {
         transition={{ duration: 0.5 }}
         className="text-center mb-16"
       >
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4">
+        <h1 className="text-4xl font-bold bg-linear-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4">
           Blog & Resources
         </h1>
         <p className="text-lg text-slate-400 max-w-2xl mx-auto">
@@ -122,7 +122,7 @@ export default function BlogPage() {
                   transition={{ delay: 0.05 * index }}
                   className={`flex items-center justify-between w-full text-left px-4 py-3 rounded-lg transition-colors ${
                     category.name === "All"
-                      ? "bg-gradient-to-r from-blue-500/10 to-cyan-500/10 text-cyan-400 border border-cyan-500/20"
+                      ? "bg-linear-to-r from-blue-500/10 to-cyan-500/10 text-cyan-400 border border-cyan-500/20"
                       : "text-slate-400 hover:bg-slate-800/50 hover:text-slate-200"
                   }`}
                 >
@@ -150,7 +150,7 @@ export default function BlogPage() {
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full px-4 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-medium rounded-lg text-sm hover:opacity-90 transition-opacity"
+                  className="w-full px-4 py-3 bg-linear-to-r from-blue-500 to-cyan-500 text-white font-medium rounded-lg text-sm hover:opacity-90 transition-opacity"
                 >
                   Subscribe
                 </motion.button>

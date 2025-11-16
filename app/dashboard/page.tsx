@@ -12,6 +12,10 @@ type Task = {
   userId?: string;
 };
 
+declare global {
+  interface Window { refreshTasks?: () => void }
+}
+
 export default function DashboardPage() {
   const router = useRouter();
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -45,13 +49,6 @@ export default function DashboardPage() {
     fetchTasks();
   }, [fetchTasks]);
 
-  // Allow TaskForm to trigger a refresh by listening to storage event or simple reload.
-  // For now, we expose a refresh method via window so TaskForm can call `window.refreshTasks()` if desired.
-  // expose refresh on window for quick manual refresh from other client code
-  declare global {
-    interface Window { refreshTasks?: () => void }
-  }
-
   useEffect(() => {
     window.refreshTasks = fetchTasks;
     return () => { window.refreshTasks = undefined; };
@@ -62,7 +59,7 @@ export default function DashboardPage() {
       <div className="max-w-7xl mx-auto space-y-8">
         {/* Header Section */}
         <div className="text-center space-y-2">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-[#3B82F6] via-[#22D3EE] to-[#3B82F6] bg-clip-text text-transparent animate-gradient">
+          <h1 className="text-4xl font-bold bg-linear-to-r from-[#3B82F6] via-[#22D3EE] to-[#3B82F6] bg-clip-text text-transparent animate-gradient">
             Your Task Dashboard
           </h1>
           <p className="text-slate-400 text-lg">Manage your tasks efficiently</p>
@@ -70,7 +67,7 @@ export default function DashboardPage() {
 
         {/* Task Form with Animation Wrapper */}
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-[#3B82F6] to-[#22D3EE] rounded-2xl blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute inset-0 bg-linear-to-r from-[#3B82F6] to-[#22D3EE] rounded-2xl blur-xl opacity-20 animate-pulse"></div>
           <div className="relative bg-[#1E293B] rounded-2xl p-6 border border-slate-700/50 shadow-2xl hover:shadow-[#3B82F6]/20 transition-shadow duration-300">
             <TaskForm />
           </div>
@@ -96,7 +93,7 @@ export default function DashboardPage() {
           ) : tasks.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-16 space-y-4">
               <div className="relative">
-                <div className="w-24 h-24 bg-gradient-to-br from-[#3B82F6] to-[#22D3EE] rounded-full opacity-20 animate-pulse"></div>
+                <div className="w-24 h-24 bg-linear-to-br from-[#3B82F6] to-[#22D3EE] rounded-full opacity-20 animate-pulse"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <svg className="w-12 h-12 text-[#22D3EE]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />

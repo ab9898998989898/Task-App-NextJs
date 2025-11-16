@@ -181,7 +181,8 @@ const faqs = [
 ];
 
 export default function AboutPage() {
-  const fadeInUp = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const fadeInUp: any = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
@@ -218,7 +219,7 @@ export default function AboutPage() {
     <div className="bg-slate-950 text-slate-300">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-slate-900 to-cyan-900/30" />
+        <div className="absolute inset-0 bg-linear-to-br from-blue-900/30 via-slate-900 to-cyan-900/30" />
         
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -227,7 +228,7 @@ export default function AboutPage() {
           className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 text-center"
         >
           <motion.h1 
-            className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6"
+            className="text-5xl md:text-6xl font-bold bg-linear-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
@@ -248,7 +249,7 @@ export default function AboutPage() {
 
       {/* Stats Section (Expanded) */}
       <div className="bg-slate-900/50 relative py-16">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-500/10 to-transparent opacity-20" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,var(--tw-gradient-stops))] from-blue-500/10 to-transparent opacity-20" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <motion.div 
             variants={staggerContainer}
@@ -487,7 +488,7 @@ export default function AboutPage() {
                   src={member.image}
                   alt={member.name}
                   className="w-32 h-32 rounded-full mx-auto mb-4 border-2 border-cyan-500/50"
-                  onError={(e) => { e.target.src = 'https://placehold.co/400x400/0f172a/38bdf8?text=??' }}
+                  onError={(e: any) => { e.target.src = 'https://placehold.co/400x400/0f172a/38bdf8?text=??' }}
                 />
                 <h3 className="text-xl font-semibold text-slate-100">
                   {member.name}
@@ -543,7 +544,7 @@ export default function AboutPage() {
                   </div>
                   <h3 className="text-xl font-semibold text-slate-100 mb-3">{office.name}</h3>
                   <div className="flex items-start justify-center gap-2 text-slate-400">
-                    <MapPin className="w-5 h-5 text-slate-500 mt-1 flex-shrink-0" />
+                    <MapPin className="w-5 h-5 text-slate-500 mt-1 shrink-0" />
                     <span>{office.address}</span>
                   </div>
                 </motion.div>
@@ -607,7 +608,7 @@ export default function AboutPage() {
                 className="bg-slate-900/50 p-6 rounded-lg border border-slate-800/50 text-center"
               >
                 <h3 className="text-lg font-semibold text-slate-100 mb-3 flex items-center justify-center gap-2">
-                  <HelpCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                  <HelpCircle className="w-5 h-5 text-cyan-400 shrink-0" />
                   <span>{faq.question}</span>
                 </h3>
                 <p className="text-slate-400 leading-relaxed">{faq.answer}</p>
@@ -618,7 +619,7 @@ export default function AboutPage() {
       </div>
 
       {/* CTA Section (Unchanged) */}
-      <div className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30">
+      <div className="bg-linear-to-br from-blue-900/30 to-cyan-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -634,7 +635,7 @@ export default function AboutPage() {
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-8 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-medium rounded-lg hover:opacity-90 transition-opacity"
+                className="px-8 py-3 bg-linear-to-r from-blue-500 to-cyan-500 text-white font-medium rounded-lg hover:opacity-90 transition-opacity"
               >
                 Get Started for Free
               </motion.button>

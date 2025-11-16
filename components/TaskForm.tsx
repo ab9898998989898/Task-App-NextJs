@@ -12,7 +12,7 @@ export default function TaskForm() {
   const [focusedField, setFocusedField] = useState<string | null>(null);
   const [showSuccess, setShowSuccess] = useState(false);
 
-  const submit = async (e) => {
+  const submit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!title.trim()) return;
 
@@ -57,7 +57,7 @@ export default function TaskForm() {
             exit={{ opacity: 0, y: -20, scale: 0.9 }}
             className="absolute -top-16 left-1/2 transform -translate-x-1/2 z-50"
           >
-            <div className="bg-gradient-to-r from-[#34D399] to-[#22D3EE] text-white px-6 py-3 rounded-xl shadow-lg shadow-[#34D399]/50 flex items-center gap-2">
+            <div className="bg-linear-to-r from-[#34D399] to-[#22D3EE] text-white px-6 py-3 rounded-xl shadow-lg shadow-[#34D399]/50 flex items-center gap-2">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
@@ -70,7 +70,7 @@ export default function TaskForm() {
       <form onSubmit={submit} className="space-y-4">
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">
-          <div className="w-10 h-10 bg-gradient-to-br from-[#3B82F6] to-[#22D3EE] rounded-xl flex items-center justify-center">
+          <div className="w-10 h-10 bg-linear-to-br from-[#3B82F6] to-[#22D3EE] rounded-xl flex items-center justify-center">
             <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
             </svg>
@@ -156,7 +156,7 @@ export default function TaskForm() {
           disabled={isSubmitting || !title.trim()}
           whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
           whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
-          className="w-full py-3.5 px-6 bg-gradient-to-r from-[#3B82F6] to-[#22D3EE] text-white font-semibold rounded-xl shadow-lg shadow-[#3B82F6]/50 hover:shadow-[#3B82F6]/70 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group"
+          className="w-full py-3.5 px-6 bg-linear-to-r from-[#3B82F6] to-[#22D3EE] text-white font-semibold rounded-xl shadow-lg shadow-[#3B82F6]/50 hover:shadow-[#3B82F6]/70 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group"
         >
           {isSubmitting ? (
             <span className="flex items-center justify-center gap-2">
@@ -174,7 +174,7 @@ export default function TaskForm() {
                 </svg>
                 Add Task
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-[#22D3EE] to-[#3B82F6] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-linear-to-r from-[#22D3EE] to-[#3B82F6] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </>
           )}
         </motion.button>
@@ -182,7 +182,7 @@ export default function TaskForm() {
         {/* Quick Tips */}
         <div className="mt-4 p-4 bg-[#0F172A]/50 rounded-xl border border-slate-800/50">
           <div className="flex items-start gap-3">
-            <div className="w-8 h-8 bg-[#3B82F6]/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+            <div className="w-8 h-8 bg-[#3B82F6]/20 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
               <svg className="w-4 h-4 text-[#3B82F6]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>

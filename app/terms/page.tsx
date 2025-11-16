@@ -4,7 +4,7 @@ const TermsPage: React.FC = () => {
   return (
     <div className="max-w-4xl mx-auto bg-slate-900/50 backdrop-blur-lg rounded-2xl p-6 sm:p-8 md:p-12 border border-slate-800/50 shadow-2xl shadow-cyan-500/10">
       <header className="mb-10 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4">
           Terms & Conditions
         </h1>
         <p className="text-slate-400">

@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 
-export default function TaskCard({ task }) {
+export default function TaskCard({ task }: { task: any }) {
   const router = useRouter();
   const [isDeleting, setIsDeleting] = useState(false);
   const [isUpdating, setIsUpdating] = useState(false);
@@ -56,7 +56,7 @@ export default function TaskCard({ task }) {
         className="relative group"
       >
         {/* Glow Effect on Hover */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#3B82F6] to-[#22D3EE] rounded-2xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-linear-to-r from-[#3B82F6] to-[#22D3EE] rounded-2xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
         
         {/* Card Content */}
         <div className={`relative p-6 bg-[#1E293B] rounded-2xl border transition-all duration-300 ${
@@ -69,7 +69,7 @@ export default function TaskCard({ task }) {
             <motion.div
               initial={{ scale: 0, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
-              className="absolute top-4 right-4 w-8 h-8 bg-gradient-to-br from-[#34D399] to-[#22D3EE] rounded-full flex items-center justify-center shadow-lg shadow-[#34D399]/50"
+              className="absolute top-4 right-4 w-8 h-8 bg-linear-to-br from-[#34D399] to-[#22D3EE] rounded-full flex items-center justify-center shadow-lg shadow-[#34D399]/50"
             >
               <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
@@ -108,7 +108,7 @@ export default function TaskCard({ task }) {
               className={`flex-1 px-4 py-2.5 rounded-xl font-medium transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed ${
                 task.completed
                   ? 'bg-slate-700 text-slate-300 hover:bg-slate-600 border border-slate-600'
-                  : 'bg-gradient-to-r from-[#34D399] to-[#22D3EE] text-white shadow-lg shadow-[#34D399]/30 hover:shadow-[#34D399]/50'
+                  : 'bg-linear-to-r from-[#34D399] to-[#22D3EE] text-white shadow-lg shadow-[#34D399]/30 hover:shadow-[#34D399]/50'
               }`}
             >
               {isUpdating ? (

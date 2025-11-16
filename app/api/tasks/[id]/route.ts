@@ -4,7 +4,7 @@ import connectDB from "@/lib/mongodb";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../../auth/[...nextauth]/route";
 
-export async function GET(req: Request, {params}:{params:Promise<{id:string}>>}){
+export async function GET(req: Request, {params}:{params:Promise<{id:string}>}): Promise<NextResponse> {
     try {
         await connectDB();
         const session = await getServerSession(authOptions);
@@ -13,7 +13,7 @@ export async function GET(req: Request, {params}:{params:Promise<{id:string}>>})
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
         }
         
-        const id = (await params).id;
+        const { id } = await params;
         const task = await Task.findById(id);
         
         if (!task) {
@@ -27,7 +27,7 @@ export async function GET(req: Request, {params}:{params:Promise<{id:string}>>})
     }
 }
 
-export async function PUT(req: Request, {params}:{params:Promise<{id:string}>>}){
+export async function PUT(req: Request, {params}:{params:Promise<{id:string}>}): Promise<NextResponse> {
     try {
         await connectDB();
         const session = await getServerSession(authOptions);
@@ -36,7 +36,7 @@ export async function PUT(req: Request, {params}:{params:Promise<{id:string}>>})
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
         }
         
-        const id = (await params).id;
+        const { id } = await params;
         const data = await req.json();
         const updated = await Task.findByIdAndUpdate(id, data, {new:true});
         
@@ -51,7 +51,7 @@ export async function PUT(req: Request, {params}:{params:Promise<{id:string}>>})
     }
 }
 
-export async function DELETE(req: Request, {params}:{params:Promise<{id:string}>>}){
+export async function DELETE(req: Request, {params}:{params:Promise<{id:string}>}): Promise<NextResponse> {
     try {
         await connectDB();
         const session = await getServerSession(authOptions);
@@ -60,7 +60,7 @@ export async function DELETE(req: Request, {params}:{params:Promise<{id:string}>
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
         }
         
-        const id = (await params).id;
+        const { id } = await params;
         const deleted = await Task.findByIdAndDelete(id);
         
         if (!deleted) {

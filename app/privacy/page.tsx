@@ -5,16 +5,16 @@ export default function PrivacyPage() {
   const effectiveDate = new Date('2025-02-01');
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12 px-4">
+    <div className="min-h-screen bg-linear-to-br from-slate-900 via-slate-800 to-slate-900 py-12 px-4">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="bg-slate-900/50 backdrop-blur-lg rounded-2xl p-8 border border-slate-800/50 shadow-2xl mb-8">
           <div className="flex items-center gap-4 mb-4">
-            <div className="p-3 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl">
+            <div className="p-3 bg-linear-to-br from-blue-500 to-cyan-500 rounded-xl">
               <Shield className="w-8 h-8 text-white" />
             </div>
             <div>
-              <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              <h1 className="text-5xl font-bold bg-linear-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 Privacy Policy
               </h1>
               <p className="text-slate-400 mt-2">Your privacy is our priority</p>
@@ -23,7 +23,7 @@ export default function PrivacyPage() {
           
           <div className="bg-slate-800/40 rounded-xl p-6 border border-slate-700/50 mt-6">
             <div className="flex items-start gap-3">
-              <AlertCircle className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-1" />
+              <AlertCircle className="w-6 h-6 text-cyan-400 shrink-0 mt-1" />
               <div>
                 <p className="text-slate-300 leading-relaxed mb-3">
                   At TaskApp, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your data when you use our services.
@@ -44,7 +44,7 @@ export default function PrivacyPage() {
         {/* Key Highlights */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <div className="bg-slate-900/50 backdrop-blur-lg rounded-xl p-6 border border-slate-800/50">
-            <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
+            <div className="w-12 h-12 bg-linear-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
               <CheckCircle className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-lg font-semibold text-slate-100 mb-2">No Data Selling</h3>
@@ -52,7 +52,7 @@ export default function PrivacyPage() {
           </div>
 
           <div className="bg-slate-900/50 backdrop-blur-lg rounded-xl p-6 border border-slate-800/50">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
+            <div className="w-12 h-12 bg-linear-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
               <Lock className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-lg font-semibold text-slate-100 mb-2">Encrypted Storage</h3>
@@ -60,7 +60,7 @@ export default function PrivacyPage() {
           </div>
 
           <div className="bg-slate-900/50 backdrop-blur-lg rounded-xl p-6 border border-slate-800/50">
-            <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+            <div className="w-12 h-12 bg-linear-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
               <UserCheck className="w-6 h-6 text-white" />
             </div>
             <h3 className="text-lg font-semibold text-slate-100 mb-2">Full Control</h3>
@@ -72,9 +72,9 @@ export default function PrivacyPage() {
         <div className="space-y-6">
           {/* Section 1 */}
           <section className="bg-slate-900/50 backdrop-blur-lg rounded-2xl border border-slate-800/50 overflow-hidden shadow-xl">
-            <div className="p-6 border-b border-slate-800/50 bg-gradient-to-r from-slate-800/50 to-transparent">
+            <div className="p-6 border-b border-slate-800/50 bg-linear-to-r from-slate-800/50 to-transparent">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg">
+                <div className="p-2 bg-linear-to-br from-blue-500 to-cyan-500 rounded-lg">
                   <Database className="w-6 h-6 text-white" />
                 </div>
                 <h2 className="text-2xl font-semibold text-slate-100">1. Information We Collect</h2>
@@ -156,9 +156,9 @@ export default function PrivacyPage() {
 
           {/* Section 2 */}
           <section className="bg-slate-900/50 backdrop-blur-lg rounded-2xl border border-slate-800/50 overflow-hidden shadow-xl">
-            <div className="p-6 border-b border-slate-800/50 bg-gradient-to-r from-slate-800/50 to-transparent">
+            <div className="p-6 border-b border-slate-800/50 bg-linear-to-r from-slate-800/50 to-transparent">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg">
+                <div className="p-2 bg-linear-to-br from-purple-500 to-pink-500 rounded-lg">
                   <FileText className="w-6 h-6 text-white" />
                 </div>
                 <h2 className="text-2xl font-semibold text-slate-100">2. How We Use Your Information</h2>
@@ -260,9 +260,9 @@ export default function PrivacyPage() {
 
           {/* Section 3 */}
           <section className="bg-slate-900/50 backdrop-blur-lg rounded-2xl border border-slate-800/50 overflow-hidden shadow-xl">
-            <div className="p-6 border-b border-slate-800/50 bg-gradient-to-r from-slate-800/50 to-transparent">
+            <div className="p-6 border-b border-slate-800/50 bg-linear-to-r from-slate-800/50 to-transparent">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg">
+                <div className="p-2 bg-linear-to-br from-green-500 to-emerald-500 rounded-lg">
                   <Lock className="w-6 h-6 text-white" />
                 </div>
                 <h2 className="text-2xl font-semibold text-slate-100">3. Data Security & Protection</h2>
@@ -282,19 +282,19 @@ export default function PrivacyPage() {
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
                     <div className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 shrink-0" />
                       <span><strong>AES-256 Encryption:</strong> All data encrypted at rest and in transit using TLS 1.3</span>
                     </div>
                     <div className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 shrink-0" />
                       <span><strong>Secure Architecture:</strong> Multi-layered security with firewalls and intrusion detection</span>
                     </div>
                     <div className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 shrink-0" />
                       <span><strong>Regular Backups:</strong> Automated encrypted backups with redundancy</span>
                     </div>
                     <div className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 shrink-0" />
                       <span><strong>DDoS Protection:</strong> Advanced protection against distributed attacks</span>
                     </div>
                   </div>
@@ -307,19 +307,19 @@ export default function PrivacyPage() {
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
                     <div className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 shrink-0" />
                       <span><strong>Two-Factor Authentication:</strong> Optional 2FA for enhanced account security</span>
                     </div>
                     <div className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 shrink-0" />
                       <span><strong>Role-Based Access:</strong> Granular permissions and access controls</span>
                     </div>
                     <div className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 shrink-0" />
                       <span><strong>Session Management:</strong> Automatic timeout and secure session handling</span>
                     </div>
                     <div className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 shrink-0" />
                       <span><strong>Employee Access:</strong> Strict least-privilege access for staff members</span>
                     </div>
                   </div>
@@ -332,19 +332,19 @@ export default function PrivacyPage() {
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
                     <div className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 shrink-0" />
                       <span><strong>24/7 Monitoring:</strong> Continuous security monitoring and threat detection</span>
                     </div>
                     <div className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 shrink-0" />
                       <span><strong>Security Audits:</strong> Regular third-party security assessments</span>
                     </div>
                     <div className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 shrink-0" />
                       <span><strong>SOC 2 Type II:</strong> Certified compliance with security standards</span>
                     </div>
                     <div className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 shrink-0" />
                       <span><strong>GDPR Compliant:</strong> Full compliance with data protection regulations</span>
                     </div>
                   </div>
@@ -353,7 +353,7 @@ export default function PrivacyPage() {
 
               <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-5">
                 <div className="flex items-start gap-3">
-                  <AlertCircle className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
+                  <AlertCircle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
                   <p className="text-slate-300 text-sm leading-relaxed">
                     <strong className="text-amber-400">Important:</strong> While we implement robust security measures, no method of transmission over the internet is 100% secure. We recommend using strong passwords, enabling 2FA, and being cautious about sharing sensitive information.
                   </p>
@@ -364,9 +364,9 @@ export default function PrivacyPage() {
 
           {/* Section 4 */}
           <section className="bg-slate-900/50 backdrop-blur-lg rounded-2xl border border-slate-800/50 overflow-hidden shadow-xl">
-            <div className="p-6 border-b border-slate-800/50 bg-gradient-to-r from-slate-800/50 to-transparent">
+            <div className="p-6 border-b border-slate-800/50 bg-linear-to-r from-slate-800/50 to-transparent">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg">
+                <div className="p-2 bg-linear-to-br from-orange-500 to-red-500 rounded-lg">
                   <Globe className="w-6 h-6 text-white" />
                 </div>
                 <h2 className="text-2xl font-semibold text-slate-100">4. Data Sharing & Disclosure</h2>
@@ -419,9 +419,9 @@ export default function PrivacyPage() {
 
           {/* Section 5 */}
           <section className="bg-slate-900/50 backdrop-blur-lg rounded-2xl border border-slate-800/50 overflow-hidden shadow-xl">
-            <div className="p-6 border-b border-slate-800/50 bg-gradient-to-r from-slate-800/50 to-transparent">
+            <div className="p-6 border-b border-slate-800/50 bg-linear-to-r from-slate-800/50 to-transparent">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg">
+                <div className="p-2 bg-linear-to-br from-cyan-500 to-blue-500 rounded-lg">
                   <UserCheck className="w-6 h-6 text-white" />
                 </div>
                 <h2 className="text-2xl font-semibold text-slate-100">5. Your Privacy Rights</h2>
@@ -434,7 +434,7 @@ export default function PrivacyPage() {
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-800/30 p-5 rounded-xl border border-slate-700/50">
+                <div className="bg-linear-to-br from-slate-800/50 to-slate-800/30 p-5 rounded-xl border border-slate-700/50">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center">
                       <Eye className="w-5 h-5 text-cyan-400" />
@@ -446,7 +446,7 @@ export default function PrivacyPage() {
                   </p>
                 </div>
 
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-800/30 p-5 rounded-xl border border-slate-700/50">
+                <div className="bg-linear-to-br from-slate-800/50 to-slate-800/30 p-5 rounded-xl border border-slate-700/50">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
                       <FileText className="w-5 h-5 text-blue-400" />
@@ -458,7 +458,7 @@ export default function PrivacyPage() {
                   </p>
                 </div>
 
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-800/30 p-5 rounded-xl border border-slate-700/50">
+                <div className="bg-linear-to-br from-slate-800/50 to-slate-800/30 p-5 rounded-xl border border-slate-700/50">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-10 h-10 bg-red-500/20 rounded-lg flex items-center justify-center">
                       <Trash2 className="w-5 h-5 text-red-400" />
@@ -470,7 +470,7 @@ export default function PrivacyPage() {
                   </p>
                 </div>
 
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-800/30 p-5 rounded-xl border border-slate-700/50">
+                <div className="bg-linear-to-br from-slate-800/50 to-slate-800/30 p-5 rounded-xl border border-slate-700/50">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center">
                       <Download className="w-5 h-5 text-purple-400" />
@@ -482,7 +482,7 @@ export default function PrivacyPage() {
                   </p>
                 </div>
 
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-800/30 p-5 rounded-xl border border-slate-700/50">
+                <div className="bg-linear-to-br from-slate-800/50 to-slate-800/30 p-5 rounded-xl border border-slate-700/50">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center">
                       <Bell className="w-5 h-5 text-orange-400" />
@@ -494,7 +494,7 @@ export default function PrivacyPage() {
                   </p>
                 </div>
 
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-800/30 p-5 rounded-xl border border-slate-700/50">
+                <div className="bg-linear-to-br from-slate-800/50 to-slate-800/30 p-5 rounded-xl border border-slate-700/50">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
                       <Lock className="w-5 h-5 text-green-400" />
@@ -506,7 +506,7 @@ export default function PrivacyPage() {
                   </p>
                 </div>
 
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-800/30 p-5 rounded-xl border border-slate-700/50">
+                <div className="bg-linear-to-br from-slate-800/50 to-slate-800/30 p-5 rounded-xl border border-slate-700/50">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-10 h-10 bg-pink-500/20 rounded-lg flex items-center justify-center">
                       <Shield className="w-5 h-5 text-pink-400" />
@@ -518,7 +518,7 @@ export default function PrivacyPage() {
                   </p>
                 </div>
 
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-800/30 p-5 rounded-xl border border-slate-700/50">
+                <div className="bg-linear-to-br from-slate-800/50 to-slate-800/30 p-5 rounded-xl border border-slate-700/50">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-10 h-10 bg-yellow-500/20 rounded-lg flex items-center justify-center">
                       <AlertCircle className="w-5 h-5 text-yellow-400" />
@@ -551,9 +551,9 @@ export default function PrivacyPage() {
 
           {/* Section 6 */}
           <section className="bg-slate-900/50 backdrop-blur-lg rounded-2xl border border-slate-800/50 overflow-hidden shadow-xl">
-            <div className="p-6 border-b border-slate-800/50 bg-gradient-to-r from-slate-800/50 to-transparent">
+            <div className="p-6 border-b border-slate-800/50 bg-linear-to-r from-slate-800/50 to-transparent">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-lg">
+                <div className="p-2 bg-linear-to-br from-indigo-500 to-purple-500 rounded-lg">
                   <Database className="w-6 h-6 text-white" />
                 </div>
                 <h2 className="text-2xl font-semibold text-slate-100">6. Data Retention</h2>
@@ -608,9 +608,9 @@ export default function PrivacyPage() {
 
           {/* Section 7 */}
           <section className="bg-slate-900/50 backdrop-blur-lg rounded-2xl border border-slate-800/50 overflow-hidden shadow-xl">
-            <div className="p-6 border-b border-slate-800/50 bg-gradient-to-r from-slate-800/50 to-transparent">
+            <div className="p-6 border-b border-slate-800/50 bg-linear-to-r from-slate-800/50 to-transparent">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-gradient-to-br from-pink-500 to-rose-500 rounded-lg">
+                <div className="p-2 bg-linear-to-br from-pink-500 to-rose-500 rounded-lg">
                   <Users className="w-6 h-6 text-white" />
                 </div>
                 <h2 className="text-2xl font-semibold text-slate-100">7. Children's Privacy</h2>
@@ -632,9 +632,9 @@ export default function PrivacyPage() {
 
           {/* Section 8 */}
           <section className="bg-slate-900/50 backdrop-blur-lg rounded-2xl border border-slate-800/50 overflow-hidden shadow-xl">
-            <div className="p-6 border-b border-slate-800/50 bg-gradient-to-r from-slate-800/50 to-transparent">
+            <div className="p-6 border-b border-slate-800/50 bg-linear-to-r from-slate-800/50 to-transparent">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-lg">
+                <div className="p-2 bg-linear-to-br from-teal-500 to-cyan-500 rounded-lg">
                   <Globe className="w-6 h-6 text-white" />
                 </div>
                 <h2 className="text-2xl font-semibold text-slate-100">8. International Data Transfers</h2>
@@ -650,15 +650,15 @@ export default function PrivacyPage() {
               </p>
               <ul className="space-y-2 ml-6">
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 shrink-0" />
                   <span><strong>Standard Contractual Clauses (SCCs):</strong> We use EU-approved SCCs with all third-party processors</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 shrink-0" />
                   <span><strong>Adequacy Decisions:</strong> We transfer data to countries recognized by the EU as providing adequate protection</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 shrink-0" />
                   <span><strong>Data Processing Agreements:</strong> Binding agreements that ensure data protection standards are maintained</span>
                 </li>
               </ul>
@@ -670,9 +670,9 @@ export default function PrivacyPage() {
 
           {/* Section 9 */}
           <section className="bg-slate-900/50 backdrop-blur-lg rounded-2xl border border-slate-800/50 overflow-hidden shadow-xl">
-            <div className="p-6 border-b border-slate-800/50 bg-gradient-to-r from-slate-800/50 to-transparent">
+            <div className="p-6 border-b border-slate-800/50 bg-linear-to-r from-slate-800/50 to-transparent">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-gradient-to-br from-amber-500 to-orange-500 rounded-lg">
+                <div className="p-2 bg-linear-to-br from-amber-500 to-orange-500 rounded-lg">
                   <Bell className="w-6 h-6 text-white" />
                 </div>
                 <h2 className="text-2xl font-semibold text-slate-100">9. Changes to This Privacy Policy</h2>
@@ -708,9 +708,9 @@ export default function PrivacyPage() {
 
           {/* Section 10 */}
           <section className="bg-slate-900/50 backdrop-blur-lg rounded-2xl border border-slate-800/50 overflow-hidden shadow-xl">
-            <div className="p-6 border-b border-slate-800/50 bg-gradient-to-r from-slate-800/50 to-transparent">
+            <div className="p-6 border-b border-slate-800/50 bg-linear-to-r from-slate-800/50 to-transparent">
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-gradient-to-br from-violet-500 to-purple-500 rounded-lg">
+                <div className="p-2 bg-linear-to-br from-violet-500 to-purple-500 rounded-lg">
                   <FileText className="w-6 h-6 text-white" />
                 </div>
                 <h2 className="text-2xl font-semibold text-slate-100">10. Cookies & Tracking Technologies</h2>
@@ -765,7 +765,7 @@ export default function PrivacyPage() {
                 <p className="text-sm text-slate-400 mb-3">
                   You can control cookies through your browser settings or our cookie preference center. Note that disabling certain cookies may affect functionality.
                 </p>
-                <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-medium rounded-lg hover:opacity-90 transition-opacity">
+                <button className="px-4 py-2 bg-linear-to-r from-blue-500 to-cyan-500 text-white text-sm font-medium rounded-lg hover:opacity-90 transition-opacity">
                   Manage Cookie Preferences
                 </button>
               </div>
@@ -773,9 +773,9 @@ export default function PrivacyPage() {
           </section>
 
           {/* Contact Section */}
-          <section className="bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-lg rounded-2xl p-8 border border-slate-800/50 shadow-2xl">
+          <section className="bg-linear-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-lg rounded-2xl p-8 border border-slate-800/50 shadow-2xl">
             <div className="flex items-center gap-3 mb-6">
-              <div className="p-3 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl">
+              <div className="p-3 bg-linear-to-br from-blue-500 to-cyan-500 rounded-xl">
                 <Mail className="w-7 h-7 text-white" />
               </div>
               <h2 className="text-3xl font-semibold text-slate-100">Contact Us</h2>
@@ -790,14 +790,14 @@ export default function PrivacyPage() {
                 <h3 className="font-semibold text-slate-100 mb-4">General Inquiries</h3>
                 <div className="space-y-3 text-sm">
                   <div className="flex items-start gap-3">
-                    <Mail className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                    <Mail className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
                     <div>
                       <p className="text-slate-300 font-medium">Email</p>
                       <a href="mailto:privacy@taskapp.com" className="text-cyan-400 hover:underline">privacy@taskapp.com</a>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <Globe className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                    <Globe className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
                     <div>
                       <p className="text-slate-300 font-medium">Website</p>
                       <a href="https://taskapp.com/privacy" className="text-cyan-400 hover:underline">taskapp.com/privacy</a>
@@ -810,14 +810,14 @@ export default function PrivacyPage() {
                 <h3 className="font-semibold text-slate-100 mb-4">Data Protection Officer</h3>
                 <div className="space-y-3 text-sm">
                   <div className="flex items-start gap-3">
-                    <Mail className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                    <Mail className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
                     <div>
                       <p className="text-slate-300 font-medium">Email</p>
                       <a href="mailto:dpo@taskapp.com" className="text-cyan-400 hover:underline">dpo@taskapp.com</a>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
-                    <FileText className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
+                    <FileText className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
                     <div>
                       <p className="text-slate-300 font-medium">Mailing Address</p>
                       <p className="text-slate-400">TaskApp Inc.<br/>123 Privacy Lane<br/>San Francisco, CA 94102<br/>United States</p>

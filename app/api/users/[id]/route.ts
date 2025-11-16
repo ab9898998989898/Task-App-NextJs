@@ -5,17 +5,17 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 
 
-// ===============
 // GET USER BY ID
 // ===============
 export async function GET(
   req: Request,
-  { params }: { params: { id: string } }
-) {
+  { params }: { params: Promise<{ id: string }> }
+): Promise<NextResponse> {
   try {
     await connectDB();
 
-    const user = await User.findById(params.id).select("-password");
+    const { id } = await params;
+    const user = await User.findById(id).select("-password");
 
     if (!user) {
       return NextResponse.json({ error: "User not found" }, { status: 404 });
@@ -33,18 +33,19 @@ export async function GET(
 // =====================
 export async function PUT(
   req: Request,
-  { params }: { params: { id: string } }
-) {
+  { params }: { params: Promise<{ id: string }> }
+): Promise<NextResponse> {
   try {
     await connectDB();
 
+    const { id } = await params;
     const session = await getServerSession(authOptions);
     if (!session) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
     // Only allow the same user OR admin (if you later add roles)
-    if (session.user.id !== params.id) {
+    if (session.user.id !== id) {
       return NextResponse.json(
         { error: "Permission denied" },
         { status: 403 }
@@ -54,7 +55,7 @@ export async function PUT(
     const body = await req.json();
 
     const updatedUser = await User.findByIdAndUpdate(
-      params.id,
+      id,
       { $set: body },
       { new: true }
     ).select("-password");
@@ -75,25 +76,26 @@ export async function PUT(
 // ======================
 export async function DELETE(
   req: Request,
-  { params }: { params: { id: string } }
-) {
+  { params }: { params: Promise<{ id: string }> }
+): Promise<NextResponse> {
   try {
     await connectDB();
 
+    const { id } = await params;
     const session = await getServerSession(authOptions);
     if (!session) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
     // Only allow user to delete himself  
-    if (session.user.id !== params.id) {
+    if (session.user.id !== id) {
       return NextResponse.json(
         { error: "Permission denied" },
         { status: 403 }
       );
     }
 
-    await User.findByIdAndDelete(params.id);
+    await User.findByIdAndDelete(id);
 
     return NextResponse.json({ message: "User deleted successfully" });
   } catch (error) {
